@@ -54,6 +54,13 @@ app.get("/bad", (req, res) => {
     });   
 });
 
+app.get("/projects", (req, res) => {
+   res.render("projects.hbs",{
+       pageTitle: "Projects",
+       message: "Projects page"
+   });
+});
+
 app.listen(port, ip, () => {
     console.log(`The Express Server Has Started! Running on port: ${port}`);
 });
